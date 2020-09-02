@@ -23,29 +23,28 @@ This program takes any URL as an input and parses a web page. It drops irrelevan
 **Logic and steps:**
 1. Request to read the web page html
 2. Use beautifulsoup library to parse the page and get relevant information
-a. Drop Script and Style
-b. Extract Title
-c. Extract Meta keywords
-d. Extract Headers
-e. Extract Paragraph
-f. Extract Article
+- a. Drop Script and Style
+- b. Extract Title
+- c. Extract Meta keywords
+- d. Extract Headers
+- e. Extract Paragraph
+- f. Extract Article
 3. Multiply pre-defined weights to text extracted from different tags
-a. Title:5
-b. Keyword: 4
-c. Headers: 3
+- a. Title:5
+- b. Keyword: 4
+- c. Headers: 3
 4. Apply nltk library to manipulate the content
-a. Word tokenization (1-gram)
-b. Remove stopwords
-c. Remove non-letter words using regular expression
-d. Word stemming
+- a. Word tokenization (1-gram)
+- b. Remove stopwords
+- c. Remove non-letter words using regular expression
+- d. Word stemming
 5. Calculate word density
-a. Calculate total number of words extracted
-b. Calculate frequency of a unique word extracted
-c. Calculate Density(word i) = ((Total number of word i in the list) / (Total
-number of words in the list)) * 100
+- a. Calculate total number of words extracted
+- b. Calculate frequency of a unique word extracted
+- c. Calculate Density(word i) = ((Total number of word i in the list) / (Total number of words in the list)) * 100
 6. Finalize results
-a. Get top 10 (or less) words if the word has density >= 1
-b. Print out keywords
+- a. Get top 10 (or less) words if the word has density >= 1
+- b. Print out keywords
 
 #### Future Improvement
 1. Topic Modeling: If we could get more dataset or corpus, we will be able to classify the web page using more advanced techniques, such as TF-IDF, LDA, and Naïve Bayes.
